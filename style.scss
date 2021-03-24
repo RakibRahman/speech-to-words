@@ -1,3 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: aqua;
+  background-color: #5f19dd;
+  color: whitesmoke;
+}
+//!wrapper
+.wrapper {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+//! speech area
+.speech-area {
+  overflow: hidden;
+  position: relative;
+  margin-top: 80px;
+  background: rgba(126, 211, 33, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  & h1 {
+    text-align: center;
+    padding: 4px;
+    margin: 10px 0;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+
+  //! textarea
+  & textarea {
+    width: 320px;
+    height: 400px;
+    resize: none;
+    padding: 25px 10px 0px;
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+    text-transform: capitalize;
+    &:focus {
+      outline: none;
+    }
+  }
+  //!copy button
+  #copy-btn {
+    position: absolute;
+    top: 78px;
+    right: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      padding-left: 5px;
+
+      content: "Copy To Clipboard";
+      font-size: 12px;
+      display: none;
+    }
+    &:hover:after {
+      display: block;
+      animation: showing 1.5s ease-in 0.2s 5;
+    }
+  }
+  .ph-copy-light {
+    color: blueviolet;
+    outline: none;
+  }
+
+  @keyframes showing {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+//! speak button
+#speak-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #1485f5;
+  border-radius: 5px;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+.ph-microphone {
+  margin-top: 5px;
+}
+//!Notes
+.notes {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+
+  & li::marker {
+    font-size: 150%;
+    font-weight: bold;
+    color: #1485f5;
+  }
 }

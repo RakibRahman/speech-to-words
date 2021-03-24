@@ -5,7 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Speech To Words</title>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <div class="speech-area">
+        <h1>Speech To Words</h1>
+        <textarea id="textarea"> </textarea>
+        <button id="copy-btn"><i class="ph-copy-light"></i></button>
+      </div>
+
+      <button id="speak-btn">
+        <i class="ph-microphone ph-lg">click and speak</i>
+      </button>
+    </div>
+    <div class="notes">
+      <ul>
+        <li data-attribute="😀">Must give access to microphone</li>
+        <li>
+          If not working check if the mic icon is showing or not on the tab
+        </li>
+        <li>Try to loud your voice while speaking</li>
+        <li>Currently supports only <strong>Chrome & Edge</strong></li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
