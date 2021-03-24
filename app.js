@@ -33,6 +33,6 @@ copy.addEventListener("click", function () {
     icon: "success",
     title: "Your text has been copied to clipboard",
     showConfirmButton: false,
-    timer: 3500,
+    timer: 1500,
   });
 });
